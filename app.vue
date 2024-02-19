@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-19 22:17:10
+ * @LastEditTime: 2024-02-19 23:08:26
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: /timeNow/app.vue
@@ -16,7 +16,7 @@
         <div
             class="bg-white/5 w-full flex flex-col items-center justify-center py-[4vw]"
         >
-            <div>
+            <div class="select-none">
                 <ClockWeek></ClockWeek>
                 <ClockBoard></ClockBoard>
                 <ClockDate></ClockDate>
@@ -41,6 +41,12 @@ onBeforeUnmount(() => {
 })
 </script>
 <style lang="scss">
+html,
+body,
+#__nuxt {
+    background-color: #000;
+}
+
 @font-face {
     font-family: 'DigitalDismay';
     src: url('/fonts/DigitalDismay.otf') format('opentype');

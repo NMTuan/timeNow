@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-19 22:13:33
- * @LastEditTime: 2024-02-19 22:25:25
+ * @LastEditTime: 2024-02-19 23:06:51
  * @LastEditors: NMTuan
  * @Description:
  * @FilePath: /timeNow/stores/date.ts
