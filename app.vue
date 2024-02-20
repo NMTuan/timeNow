@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-20 15:25:07
+ * @LastEditTime: 2024-02-20 16:07:01
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\app.vue
@@ -17,8 +17,10 @@
                 <ClockDate></ClockDate>
             </div>
         </div>
-        <div class="w-full  px-[2px]">
-            <TimeLine></TimeLine>
+        <div class="w-full px-[4px]">
+            <div class="px-[4px]">
+                <TimeLine></TimeLine>
+            </div>
             <div class="my-[4px]">
                 <DayLine></DayLine>
                 <MonthLine></MonthLine>

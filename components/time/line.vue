@@ -2,13 +2,13 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 22:03:42
- * @LastEditTime: 2024-02-20 15:06:58
+ * @LastEditTime: 2024-02-20 16:06:18
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\time\line.vue
 -->
 <template>
-    <div class="flex items-end justify-between w-full relative select-none px-[4px]">
+    <div class="flex items-end justify-between w-full relative select-none">
         <template v-for="hour in 25">
             <div class="flex flex-col items-center relative">
                 <div class="font-digital-dismay text-zinc-700 bg-black absolute -top-6 z-10">
