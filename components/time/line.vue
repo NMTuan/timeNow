@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 22:03:42
- * @LastEditTime: 2024-02-20 16:06:18
+ * @LastEditTime: 2024-02-20 18:48:40
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\time\line.vue
@@ -20,7 +20,7 @@
                 <div class="w-[1px] h-[18px] bg-zinc-800"></div>
             </template>
         </template>
-        <div class="absolute bottom-0 w-[1px] h-[52px] bg-red-900 z-1" :style="progressStyle"></div>
+        <div class="absolute bottom-0 w-[1px] h-[52px] bg-orange-500 z-1" :style="progressStyle"></div>
     </div>
 </template>
 <script setup>
