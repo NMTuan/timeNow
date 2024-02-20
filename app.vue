@@ -2,28 +2,28 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-19 23:08:26
+ * @LastEditTime: 2024-02-20 15:25:07
  * @LastEditors: NMTuan
  * @Description: 
- * @FilePath: /timeNow/app.vue
+ * @FilePath: \timeNow\app.vue
 -->
 <template>
-    <div
-        class="w-full h-screen overflow-hidden flex flex-col items-center justify-between"
-    >
+    <div class="w-full h-screen overflow-hidden flex flex-col items-center justify-between">
         <div></div>
-        <!-- <ClientOnly> -->
-        <div
-            class="bg-white/5 w-full flex flex-col items-center justify-center py-[4vw]"
-        >
+        <div class="bg-white/5 w-full flex flex-col items-center justify-center py-[4vw]">
             <div class="select-none">
                 <ClockWeek></ClockWeek>
                 <ClockBoard></ClockBoard>
                 <ClockDate></ClockDate>
             </div>
         </div>
-        <!-- </ClientOnly> -->
-        <TimeLine></TimeLine>
+        <div class="w-full  px-[2px]">
+            <TimeLine></TimeLine>
+            <div class="my-[4px]">
+                <DayLine></DayLine>
+                <MonthLine></MonthLine>
+            </div>
+        </div>
     </div>
 </template>
 <script setup>

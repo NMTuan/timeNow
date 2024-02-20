@@ -2,16 +2,16 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 22:03:42
- * @LastEditTime: 2024-02-19 23:18:32
+ * @LastEditTime: 2024-02-20 15:06:58
  * @LastEditors: NMTuan
  * @Description: 
- * @FilePath: /timeNow/components/time/line.vue
+ * @FilePath: \timeNow\components\time\line.vue
 -->
 <template>
-    <div class="flex items-end justify-between w-full relative select-none">
+    <div class="flex items-end justify-between w-full relative select-none px-[4px]">
         <template v-for="hour in 25">
             <div class="flex flex-col items-center relative">
-                <div class="font-digital-dismay text-zinc-700 absolute -top-6">
+                <div class="font-digital-dismay text-zinc-700 bg-black absolute -top-6 z-10">
                     {{ hour - 1 }}
                 </div>
                 <div class="w-[1px] h-[32px] bg-zinc-800"></div>
@@ -20,10 +20,7 @@
                 <div class="w-[1px] h-[18px] bg-zinc-800"></div>
             </template>
         </template>
-        <div
-            class="absolute bottom-0 w-[1px] h-[52px] bg-red-500"
-            :style="progressStyle"
-        ></div>
+        <div class="absolute bottom-0 w-[1px] h-[52px] bg-red-900 z-1" :style="progressStyle"></div>
     </div>
 </template>
 <script setup>
