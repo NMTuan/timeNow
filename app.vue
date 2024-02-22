@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-22 12:23:55
+ * @LastEditTime: 2024-02-22 13:11:25
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\app.vue
@@ -45,12 +45,12 @@ onBeforeUnmount(() => {
 
 const title = computed(() => {
     let tit = ''
-    tit += !dateStore.hour24 && dateStore.hour > 12 ? dateStore.hour % 12 : dateStore.hour
+    tit += dateStore.hour12
     tit += ':' + dateStore.minute
     if (settingStore.showSecond) {
         tit += ':' + dateStore.second
     }
-    tit += '- 压感时钟'
+    tit += ' - 压感时钟'
     return tit
 })
 
