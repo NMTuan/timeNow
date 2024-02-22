@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-22 13:29:22
+ * @LastEditTime: 2024-02-22 15:23:37
  * @LastEditors: NMTuan
  * @Description:
  * @FilePath: \timeNow\nuxt.config.ts
@@ -10,7 +10,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: false },
-    modules: ['@nuxt/ui', '@pinia/nuxt'],
+    modules: ['@nuxt/ui', '@pinia/nuxt', 'nuxt-clarity-analytics'],
     colorMode: {
         preference: 'dark'
     },
