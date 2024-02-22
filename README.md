@@ -1,75 +1,40 @@
-# Nuxt 3 Minimal Starter
+<!--
+ * @Author: NMTuan
+ * @Email: NMTuan@qq.com
+ * @Date: 2024-02-18 11:31:25
+ * @LastEditTime: 2024-02-22 14:06:34
+ * @LastEditors: NMTuan
+ * @Description:
+ * @FilePath: \timeNow\README.md
+-->
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center"><img src="./public/logo.png" title="" alt="" data-align="center"></p>
 
-## Setup
+# 压感时钟
 
-Make sure to install the dependencies:
+一个自带压力感可全屏显示的时钟，实时显示当前时间、当前月进度及年进度。
 
-```bash
-# npm
-npm install
+# 相关地址
 
-# pnpm
-pnpm install
+[Demo 演示](https://now.muyi.dev)
 
-# yarn
-yarn install
+[GitHub 源码](https://github.com/NMTuan/timeNow)
 
-# bun
-bun install
-```
+# 开发背景
 
-## Development Server
+新的一年开始了，又到了给自己打鸡血的时间了，为了在学习的时候能方便的看时间又不被干扰，就做了这个全屏时钟。同时，增加了年进度、月进度及时间进度，给自己一点点压迫感。
 
-Start the development server on `http://localhost:3000`:
+# 界面预览
 
-```bash
-# npm
-npm run dev
+![](./public/screenshot.png)
 
-# pnpm
-pnpm run dev
+# 技术架构
 
-# yarn
-yarn dev
+本项目基于以下技术开发：
 
-# bun
-bun run dev
-```
+`Nuxt v3` `Nuxt UI` `Pinia` `RemixIcon`
 
-## Production
+# 支持一下
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+<img src="./public/wepay.jpg" title="" alt="" height="240">
+<img src="./public/alipay.jpg" title="" alt="" height="240">
