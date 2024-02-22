@@ -18,5 +18,8 @@
     "sass": "^1.71.0",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "nuxt-clarity-analytics": "^0.0.6"
   }
 }
