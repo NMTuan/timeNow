@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-20 16:11:39
- * @LastEditTime: 2024-02-22 11:53:57
+ * @LastEditTime: 2024-02-22 12:42:38
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\header\index.vue
@@ -10,7 +10,16 @@
 <template>
     <div class="w-full text-right pr-6 pt-6">
         <!--  -->
-        <HeaderIcon name="i-ri-cup-line"></HeaderIcon>
+        <HeaderIcon @click="donateVisiable = true" name="i-ri-cup-line"></HeaderIcon>
+        <UModal v-model="donateVisiable" :ui="{ width: 'sm:max-w-4xl' }">
+            <div class="py-16">
+                <div class="flex justify-around">
+                    <img class="h-96" src="/wepay.jpg" alt="">
+                    <img class="h-96" src="/alipay.jpg" alt="">
+                </div>
+            </div>
+        </UModal>
+
         <HeaderIcon name="i-ri-github-line" href="https://github.com/NMTuan/timeNow"></HeaderIcon>
         <ClientOnly>
             <HeaderToggleFullScreen></HeaderToggleFullScreen>
@@ -51,5 +60,5 @@
 <script setup>
 const settingStore = useSettingStore()
 const optionsVisiable = ref(false)
-
+const donateVisiable = ref(false)
 </script>

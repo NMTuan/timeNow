@@ -18,6 +18,12 @@ export default defineAppConfig({
         },
         card: {
             background: 'dark:bg-zinc-900'
+        },
+        modal: {
+            background: 'dark:bg-zinc-900',
+            overlay: {
+                background: 'dark:bg-black/50'
+            }
         }
     }
 })

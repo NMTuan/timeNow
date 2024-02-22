@@ -2,14 +2,14 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:48:34
- * @LastEditTime: 2024-02-22 10:23:06
+ * @LastEditTime: 2024-02-22 12:28:57
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\clock\board.vue
 -->
 <template>
     <div class="text-zinc-200 text-[22vw] leading-[24vw] text-center font-digital-dismay">
-        <span>{{ settingStore.hour24 ? dateStore.hour : dateStore.hour % 12 }}</span>
+        <span>{{ !settingStore.hour24 && dateStore.hour > 12 ? dateStore.hour % 12 : dateStore.hour }}</span>
         <span class="transition-all"
             :class="[settingStore.flicker && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
         <span>{{ dateStore.minute }}</span>

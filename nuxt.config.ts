@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:35:10
- * @LastEditTime: 2024-02-20 18:33:14
+ * @LastEditTime: 2024-02-22 12:17:25
  * @LastEditors: NMTuan
  * @Description:
  * @FilePath: \timeNow\nuxt.config.ts
@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     modules: ['@nuxt/ui', '@pinia/nuxt'],
     colorMode: {
         preference: 'dark'
+    },
+    app: {
+        head: {
+            link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+        }
     },
     ui: {
         icons: ['ri']
