@@ -18,18 +18,19 @@
             </div>
         </div>
         <div class="w-full px-[4px] mt-[26px]">
-            <div class="px-[4px]">
+            <div v-if="settingStore.showTimeLine" class="px-[4px]">
                 <TimeLine></TimeLine>
             </div>
             <div class="my-[4px]">
-                <DayLine></DayLine>
-                <MonthLine></MonthLine>
+                <DayLine v-if="settingStore.showDayLine"></DayLine>
+                <MonthLine v-if="settingStore.showMonthLine"></MonthLine>
             </div>
         </div>
     </div>
 </template>
 <script setup>
 const dateStore = useDateStore()
+const settingStore = useSettingStore()
 let dt
 
 onMounted(() => {

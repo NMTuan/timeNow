@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-20 16:11:39
- * @LastEditTime: 2024-02-20 21:22:21
+ * @LastEditTime: 2024-02-22 11:53:57
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\header\index.vue
@@ -15,8 +15,8 @@
         <ClientOnly>
             <HeaderToggleFullScreen></HeaderToggleFullScreen>
         </ClientOnly>
-        <HeaderIcon @click="optionsVisiable = true" name="i-ri-equalizer-line"></HeaderIcon>
         <!-- <HeaderIcon name="i-ri-twitter-line"></HeaderIcon> -->
+        <HeaderIcon @click="optionsVisiable = true" name="i-ri-equalizer-line"></HeaderIcon>
         <USlideover v-model="optionsVisiable">
             <UCard class="flex flex-col flex-1"
                 :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-zinc-100 dark:divide-zinc-800' }">
@@ -28,14 +28,28 @@
                         <UButton color="gray" variant="ghost" icon="i-ri-close-line" @click="optionsVisiable = false" />
                     </div>
                 </template>
-                <p v-for="i in 100">{{ i }}</p>
-
+                <UFormGroup class="mb-6">
+                    <template #label>
+                        <div class="text-base">表盘</div>
+                    </template>
+                    <UCheckbox class="my-4" v-model="settingStore.hour24" label="24小时制"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.showSecond" label="显示秒数"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.flicker" label="冒号闪动"></UCheckbox>
+                </UFormGroup>
+                <UFormGroup class="mb-6">
+                    <template #label>
+                        <div class="text-base">底部</div>
+                    </template>
+                    <UCheckbox class="my-4" v-model="settingStore.showTimeLine" label="显示日进度"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.showDayLine" label="显示月进度"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.showMonthLine" label="显示年进度"></UCheckbox>
+                </UFormGroup>
             </UCard>
         </USlideover>
     </div>
 </template>
 <script setup>
-
+const settingStore = useSettingStore()
 const optionsVisiable = ref(false)
 
 </script>
