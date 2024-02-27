@@ -11,11 +11,11 @@
     <div class="text-zinc-200 text-[22vw] leading-[24vw] text-center font-digital-dismay">
         <span>{{ dateStore.hour12 }}</span>
         <span class="transition-all"
-            :class="[settingStore.flicker && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
+            :class="[settingStore.flicker1 && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
         <span>{{ dateStore.minute }}</span>
         <template v-if="settingStore.showSecond">
             <span class="transition-all"
-                :class="[settingStore.flicker && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
+                :class="[settingStore.flicker2 && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
             <span>{{ dateStore.second }}</span>
         </template>
     </div>

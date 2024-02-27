@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-20 16:11:39
- * @LastEditTime: 2024-02-22 12:42:38
+ * @LastEditTime: 2024-02-27 18:00:05
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\header\index.vue
@@ -22,7 +22,7 @@
 
         <HeaderIcon name="i-ri-github-line" href="https://github.com/NMTuan/timeNow"></HeaderIcon>
         <ClientOnly>
-            <HeaderToggleFullScreen></HeaderToggleFullScreen>
+            <!-- <HeaderToggleFullScreen></HeaderToggleFullScreen> -->
         </ClientOnly>
         <!-- <HeaderIcon name="i-ri-twitter-line"></HeaderIcon> -->
         <HeaderIcon @click="optionsVisiable = true" name="i-ri-equalizer-line"></HeaderIcon>
@@ -43,7 +43,8 @@
                     </template>
                     <UCheckbox class="my-4" v-model="settingStore.hour24" label="24小时制"></UCheckbox>
                     <UCheckbox class="my-4" v-model="settingStore.showSecond" label="显示秒数"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.flicker" label="冒号闪动"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.flicker1" label="冒号闪动(时:分)"></UCheckbox>
+                    <UCheckbox class="my-4" v-model="settingStore.flicker2" :disabled="!settingStore.showSecond" label="冒号闪动(分:秒)"></UCheckbox>
                 </UFormGroup>
                 <UFormGroup class="mb-6">
                     <template #label>
