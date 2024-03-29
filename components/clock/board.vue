@@ -8,13 +8,12 @@
  * @FilePath: \timeNow\components\clock\board.vue
 -->
 <template>
-    <div class="flex items-center text-zinc-200 text-[22vw] leading-[24vw] text-center font-digital-dismay">
+    <div class="flex items-center text-gray-200 text-[22vw] leading-[24vw] text-center font-digital-dismay">
         <div class="relative">
             <span class="text">{{ dateStore.hour12 }}</span>
             <span class="textShadow">88</span>
         </div>
-        <span class="colon"
-            :class="[settingStore.flicker1 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
+        <span class="colon" :class="[settingStore.flicker1 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
 
         <div class="relative">
             <span class="text">{{ dateStore.minute }}</span>
@@ -22,8 +21,7 @@
         </div>
 
         <template v-if="settingStore.showSecond">
-            <span class="colon"
-                :class="[settingStore.flicker2 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
+            <span class="colon" :class="[settingStore.flicker2 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
             <div class="relative">
                 <span class="text">{{ dateStore.second }}</span>
                 <span class="textShadow">88</span>
@@ -50,6 +48,7 @@ const settingStore = useSettingStore()
 .colon {
     @apply transition-all;
     opacity: v-bind('settingStore.textOpacity');
+
     &.flash {
         @apply opacity-0;
     }

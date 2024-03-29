@@ -9,7 +9,7 @@
  */
 import { defineStore } from 'pinia'
 
-const cookieMaxAge: number = 31536000
+export const cookieMaxAge: number = 31536000
 
 export const useSettingStore = defineStore('setting', () => {
     const hour24 = useCookie('hour24', {

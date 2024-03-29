@@ -8,7 +8,7 @@
  * @FilePath: \timeNow\components\clock\date.vue
 -->
 <template>
-    <div class="text-zinc-300 font-digital-dismay text-[1.4vw] text-right mr-[1vw]">
+    <div class="text-gray-300 font-digital-dismay text-[1.4vw] text-right mr-[1vw]">
         {{ dateStore.year }}. {{ dateStore.month }}.
         {{ dateStore.date }}
     </div>

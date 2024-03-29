@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-20 16:11:39
- * @LastEditTime: 2024-03-29 13:51:03
+ * @LastEditTime: 2024-03-29 14:09:15
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\header\index.vue
@@ -25,61 +25,16 @@
             </UModal>
 
             <HeaderIcon name="i-ri-github-line" href="https://github.com/NMTuan/timeNow"></HeaderIcon>
-            <ClientOnly>
-                <HeaderToggleFullScreen></HeaderToggleFullScreen>
-            </ClientOnly>
-            <!-- <HeaderIcon name="i-ri-twitter-line"></HeaderIcon> -->
-            <HeaderIcon @click="optionsVisiable = true" name="i-ri-equalizer-line"></HeaderIcon>
-            <USlideover v-model="optionsVisiable">
-                <UCard class="flex flex-col flex-1"
-                    :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-zinc-100 dark:divide-zinc-800' }">
-                    <template #header>
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-semibold leading-6 text-zinc-900 dark:text-zinc-300">
-                                Settings
-                            </h3>
-                            <UButton color="gray" variant="ghost" icon="i-ri-close-line"
-                                @click="optionsVisiable = false" />
-                        </div>
-                    </template>
-                    <div class="title">一句话提醒自己</div>
-                    <UTextarea v-model="settingStore.motto">
-                    </UTextarea>
+            <HeaderIcon name="i-ri-twitter-line" href="https://twitter.com/NMTuans"></HeaderIcon>
 
-                    <div class="title">表盘</div>
-                    <UCheckbox class="my-4" v-model="settingStore.hour24" label="24小时制"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.showSecond" label="显示秒数"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.flicker1" label="冒号闪动(时:分)"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.flicker2" :disabled="!settingStore.showSecond"
-                        label="冒号闪动(分:秒)">
-                    </UCheckbox>
-                    <div class="flex items-center mb-1">
-                        <div class="flex-shrink-0 text-sm">液晶数字颜色</div>
-                        <URange class="ml-4" v-model="settingStore.textOpacity" :min="0" :max="1" :step="0.05" />
-                    </div>
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 text-sm">液晶背景颜色</div>
-                        <UInput class="mx-4" v-model="settingStore.textShadowColor" type="color" />
-                        <URange v-model="settingStore.textShadowOpacity" :min="0" :max="1" :step="0.05" />
-                    </div>
+            <HeaderToggleFullScreen />
 
-                    <div class="title">底部</div>
-                    <UCheckbox class="my-4" v-model="settingStore.showTimeLine" label="显示日进度"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.showDayLine" label="显示月进度"></UCheckbox>
-                    <UCheckbox class="my-4" v-model="settingStore.showMonthLine" label="显示年进度"></UCheckbox>
-                </UCard>
-            </USlideover>
+            <HeaderRemind />
+            <HeaderSetting />
         </div>
     </div>
 </template>
 <script setup>
 const settingStore = useSettingStore()
-const optionsVisiable = ref(false)
 const donateVisiable = ref(false)
 </script>
-
-<style lang="scss" scoped>
-.title {
-    @apply text-base my-4;
-}
-</style>
