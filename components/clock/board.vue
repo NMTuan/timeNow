@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 11:48:34
- * @LastEditTime: 2024-03-29 13:50:13
+ * @LastEditTime: 2024-03-29 14:16:53
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\clock\board.vue
@@ -14,7 +14,7 @@
             <span class="textShadow">88</span>
         </div>
         <span class="colon"
-            :class="[settingStore.flicker1 && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
+            :class="[settingStore.flicker1 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
 
         <div class="relative">
             <span class="text">{{ dateStore.minute }}</span>
@@ -23,7 +23,7 @@
 
         <template v-if="settingStore.showSecond">
             <span class="colon"
-                :class="[settingStore.flicker2 && (dateStore.second % 2 === 0 ? 'opacity-1' : 'opacity-0')]">:</span>
+                :class="[settingStore.flicker2 && (dateStore.second % 2 === 0 ? 'flash' : '')]">:</span>
             <div class="relative">
                 <span class="text">{{ dateStore.second }}</span>
                 <span class="textShadow">88</span>
@@ -50,5 +50,8 @@ const settingStore = useSettingStore()
 .colon {
     @apply transition-all;
     opacity: v-bind('settingStore.textOpacity');
+    &.flash {
+        @apply opacity-0;
+    }
 }
 </style>
