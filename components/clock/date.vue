@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-19 20:49:39
- * @LastEditTime: 2024-02-20 16:15:09
+ * @LastEditTime: 2024-03-29 13:50:02
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\clock\date.vue

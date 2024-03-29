@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-21 21:47:50
- * @LastEditTime: 2024-03-29 10:53:42
+ * @LastEditTime: 2024-03-29 13:53:35
  * @LastEditors: NMTuan
  * @Description:
  * @FilePath: \timeNow\stores\setting.ts
@@ -40,9 +40,27 @@ export const useSettingStore = defineStore('setting', () => {
         maxAge: cookieMaxAge,
         default: () => true
     })
+
     const motto = useCookie('motto', {
         maxAge: cookieMaxAge,
         default: () => ''
+    })
+    const textShadowOpacity = useCookie('textShadowOpacity', {
+        maxAge: cookieMaxAge,
+        default: () => 0
+    })
+    const textShadowColor = useCookie('textShadowColor', {
+        maxAge: cookieMaxAge,
+        default: () => '#ffffff'
+    })
+    // const textOpacity = useCookie('textOpacity', {
+    //     maxAge: cookieMaxAge,
+    //     default: () => 0
+    // })
+
+    const textColor = useCookie('textColor', {
+        maxAge: cookieMaxAge,
+        default: () => '#ffffff'
     })
     return {
         hour24,
@@ -52,6 +70,10 @@ export const useSettingStore = defineStore('setting', () => {
         showMonthLine,
         showDayLine,
         showTimeLine,
-        motto
+        motto,
+        textShadowOpacity,
+        textShadowColor,
+        // textOpacity,
+        textColor
     }
 })
