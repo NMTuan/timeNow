@@ -15,7 +15,7 @@
         <div class="flex-shrink-0 opacity-0 transition-all group-hover:opacity-100">
             <!--  -->
             <HeaderIcon @click="donateVisiable = true" name="i-ri-cup-line"></HeaderIcon>
-            <UModal v-model="donateVisiable" :ui="{ width: 'sm:max-w-4xl' }">
+            <UModal v-model="donateVisiable" :ui="{ width: 'sm:max-w-4xl' }" prevent-close>
                 <div class="py-16">
                     <div class="flex justify-around">
                         <img class="h-96" src="/wepay.jpg" alt="">

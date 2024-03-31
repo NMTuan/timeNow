@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-03-29 15:09:25
- * @LastEditTime: 2024-03-29 16:56:31
+ * @LastEditTime: 2024-03-31 11:34:53
  * @LastEditors: NMTuan
  * @Description:
  * @FilePath: \timeNow\stores\remind.ts
@@ -25,14 +25,18 @@ export const useRemindStore = defineStore('remind', () => {
     })
     const add = (data: Data) => {
         const clone: Data = JSON.parse(JSON.stringify(data))
+        if (clone.id) {
+            remove(clone.id)
+        }
         const second =
-            (clone.time.split(':')[0] * 60 + clone.time.split(':')[1]) * 60
+            Number(clone.time.split(':')[0]) * 60 * 60 +
+            Number(clone.time.split(':')[1]) * 60
         list.value.push({
             ...clone,
             id: (Date.now() + Math.random()).toString(36),
             style: {
                 backgroundColor: clone.color,
-                left: (second / (24 * 3600)) + '%'
+                left: `${second / (24 * 36)}%`
             }
         })
     }
