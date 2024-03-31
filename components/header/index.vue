@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-20 16:11:39
- * @LastEditTime: 2024-03-29 14:09:15
+ * @LastEditTime: 2024-03-31 15:53:17
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\header\index.vue
@@ -15,7 +15,7 @@
         <div class="flex-shrink-0 opacity-0 transition-all group-hover:opacity-100">
             <!--  -->
             <HeaderIcon @click="donateVisiable = true" name="i-ri-cup-line"></HeaderIcon>
-            <UModal v-model="donateVisiable" :ui="{ width: 'sm:max-w-4xl' }" prevent-close>
+            <UModal v-model="donateVisiable" :ui="{ width: 'sm:max-w-4xl' }">
                 <div class="py-16">
                     <div class="flex justify-around">
                         <img class="h-96" src="/wepay.jpg" alt="">
