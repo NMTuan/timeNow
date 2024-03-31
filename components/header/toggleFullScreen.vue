@@ -9,9 +9,11 @@
 -->
 
 <template>
-    <HeaderIcon v-if="state" @click="fullScreenExit" name="i-ri-fullscreen-exit-line">
-    </HeaderIcon>
-    <HeaderIcon v-else @click="fullScreen" name="i-ri-fullscreen-line"></HeaderIcon>
+    <ClientOnly>
+        <HeaderIcon v-if="state" @click="fullScreenExit" name="i-ri-fullscreen-exit-line">
+        </HeaderIcon>
+        <HeaderIcon v-else @click="fullScreen" name="i-ri-fullscreen-line"></HeaderIcon>
+    </ClientOnly>
 </template>
 <script setup>
 const state = ref(false)
