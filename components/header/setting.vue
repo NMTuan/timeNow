@@ -14,11 +14,11 @@
                 label="冒号闪动(分:秒)">
             </UCheckbox>
             <div class="flex items-center mb-1">
-                <div class="flex-shrink-0 text-sm">液晶数字颜色</div>
+                <div class="flex-shrink-0 text-sm">液晶数字</div>
                 <URange class="ml-4" v-model="settingStore.textOpacity" :min="0" :max="1" :step="0.05" />
             </div>
             <div class="flex items-center">
-                <div class="flex-shrink-0 text-sm">液晶背景颜色</div>
+                <div class="flex-shrink-0 text-sm">液晶背景</div>
                 <UInput class="mx-4" v-model="settingStore.textShadowColor" type="color" />
                 <URange v-model="settingStore.textShadowOpacity" :min="0" :max="1" :step="0.05" />
             </div>
