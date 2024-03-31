@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2024-02-18 20:00:36
- * @LastEditTime: 2024-02-20 16:15:23
+ * @LastEditTime: 2024-03-31 10:17:58
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \timeNow\components\clock\week.vue
@@ -15,7 +15,7 @@
         <div :class="[dateStore.day === 4 && 'text-gray-300']">THU.</div>
         <div :class="[dateStore.day === 5 && 'text-gray-300']">FRI.</div>
         <div :class="[dateStore.day === 6 && 'text-gray-300']">SAT.</div>
-        <div :class="[dateStore.day === 7 && 'text-gray-300']">SUN.</div>
+        <div :class="[dateStore.day === 0 && 'text-gray-300']">SUN.</div>
     </div>
 </template>
 <script setup>
