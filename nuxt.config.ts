@@ -17,13 +17,20 @@ export default defineNuxtConfig({
     app: {
         head: {
             title: '压感时钟',
-            link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+            link: [
+                { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png' },
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+                { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
+            ],
             meta: [
                 {
                     name: 'description',
                     content:
                         '一个自带压力感可全屏显示的时钟，实时显示当前时间、当前月进度及年进度。一个自带压力感可全屏显示的时钟，实时显示当前时间、当前月进度及年进度。一个自带压力感可全屏显示的时钟，实时显示当前时间、当前月进度及年进度。'
-                }
+                },
+                { name: 'msapplication-TileColor', content: '#008987' },
+                { name: 'theme-color', content: '#ffffff' }
             ]
         }
     },
