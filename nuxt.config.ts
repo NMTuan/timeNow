@@ -32,7 +32,7 @@ export default defineNuxtConfig({
                 },
                 { name: 'msapplication-TileColor', content: '#008987' },
                 { name: 'theme-color', content: '#ffffff' },
-                // { name: "apple-mobile-web-app-capable", content: "yes" },
+                { name: "apple-mobile-web-app-capable", content: "yes" },
             ]
         }
     },
